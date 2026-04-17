@@ -37,9 +37,15 @@ app.listen(port, () => {
   console.log("App is listening on port", port);
 });
 
-app.get("/", (req, res) => {
-  res.redirect("https://oralvishealthcareportal.onrender.com");
-});
+app.get("/test",(req,res)=>{
+  res.json({
+    msg : "test was successfull"
+  })
+})
+
+// app.get("/", (req, res) => {
+//   res.redirect("https://oralvishealthcareportal.onrender.com");
+// });
 
 app.get("/api/auth/check", verifyPatient, (req, res) => {
   res.json({ success: true, user: req.user });
