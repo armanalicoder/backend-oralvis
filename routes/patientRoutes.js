@@ -4,7 +4,7 @@ import { AllSubmission, fetchData, getSubmissionById, UploadRecord } from "../co
 import { verifyPatient } from "../middleware/authMiddleware.js";
 import upload from "../middleware/upload.js";
 
-router.get("/",verifyPatient,fetchData);
+router.get("/",fetchData);
 
 router.get("/submission",verifyPatient,AllSubmission);
 
